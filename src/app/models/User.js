@@ -13,7 +13,7 @@ class User extends Model {
                 sequelize,
             }
         );
-        return this; // by discord
+        return this;
     }
 }
 
