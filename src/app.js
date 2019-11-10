@@ -1,8 +1,3 @@
-// without sucrase
-// const express = require('express');
-// const routes = require('./routes');
-
-// with sucrase
 import express from 'express';
 import routes from './routes';
 
@@ -25,8 +20,4 @@ class App {
     }
 }
 
-// without sucrase
-// module.exports = new App().server;
-
-// with sucrase
 export default new App().server;
