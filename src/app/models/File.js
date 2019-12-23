@@ -13,6 +13,13 @@ class File extends Model {
         );
         return this;
     }
+<<<<<<< HEAD
 }
 
 export default File;
+=======
+
+}
+
+export default User;
+>>>>>>> 6a2dbc800c2c1dfa81020bfbfb8b8cb17559c2ab
