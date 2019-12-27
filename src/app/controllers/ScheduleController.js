@@ -1,10 +1,4 @@
-import {
-    startOfDay,
-    endOfDay,
-    parseISO,
-    startOfToday,
-    endOfToday,
-} from 'date-fns';
+import { startOfDay, endOfDay, parseISO } from 'date-fns';
 
 import { Op } from 'sequelize';
 
@@ -26,16 +20,11 @@ class ScheduleController {
         const { date } = req.query;
         const parsedDate = parseISO(date);
 
+        /*
         const d = new Date();
         const current_hour = d.getHours();
+        const now = Date.now(); */
 
-        console.log(`omg: ${d}`);
-        console.log(current_hour);
-
-        console.log(date);
-        console.log(parsedDate);
-        console.log(startOfToday());
-        console.log(endOfToday());
         const appointments = await Appointment.findAll({
             where: {
                 provider_id: req.userId,
