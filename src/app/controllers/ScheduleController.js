@@ -1,4 +1,5 @@
 import { startOfDay, endOfDay, parseISO } from 'date-fns';
+// import { zonedTimeToUtc } from 'date-fns-tz';
 
 import { Op } from 'sequelize';
 
@@ -19,11 +20,10 @@ class ScheduleController {
 
         const { date } = req.query;
         const parsedDate = parseISO(date);
-
-        /*
-        const d = new Date();
-        const current_hour = d.getHours();
-        const now = Date.now(); */
+        // const d = new Date();
+        // const current_hour = d.getHours();
+        // const now = Date.now();
+        // console.log(zonedTimeToUtc(startOfDay(marquinhu), 'America/Sao_Paulo'));
 
         const appointments = await Appointment.findAll({
             where: {
