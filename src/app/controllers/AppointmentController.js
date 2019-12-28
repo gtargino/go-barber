@@ -57,6 +57,12 @@ class AppointmentController {
             });
         }
 
+        if (req.userId == provider_id) {
+            return res.status(400).json({
+                error: 'You can not create an appointment for yourself',
+            });
+        }
+
         const hourStart = startOfHour(parseISO(date));
 
         if (isBefore(hourStart, new Date())) {
