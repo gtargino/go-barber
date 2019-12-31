@@ -1,4 +1,6 @@
+console.log(process.env.APP_SECRET);
+
 export default {
-    secret: 'c9f0e81086d062d0980f1b39f516a1bb',
+    secret: process.env.APP_SECRET,
     expiresIn: '7d',
 };
